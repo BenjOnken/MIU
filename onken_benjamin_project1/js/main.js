@@ -8,14 +8,14 @@ MiU 1210
 window.addEventListener("DOMContentLoaded", function(){
 
 	//getElementById function
-	function $(x){
+	function ge(x){
 		var theElement = document.getElementById(x);
 		return theElement;
 	}
 //create select field element and populate with options
 	function diveLength(){
 		var formTag = document.getElementsByTagName("form"); //formTag is an array of all the form tags
-		var selectLi = $('select');
+		var selectLi = ge('select');
 		var makeSelect = document.createElement('select');
 			makeSelect.setAttribute("id", "groups");
 			for(var i=0, j=lengthOfDive.length; i<j; i++){
@@ -41,18 +41,18 @@ window.addEventListener("DOMContentLoaded", function(){
     function toggleControls(n){
         switch(n){
             case "on":
-                $('diveLog').style.display = "none";
-                $('clear').style.display = "inline";
-                $('history').style.display = "none";
-                $('addNew').style.display = "inline";
-                $('mybody').style.backgroundImage = "none";
+                ge('diveLog').style.display = "none";
+                ge('clear').style.display = "inline";
+                ge('history').style.display = "none";
+                ge('addNew').style.display = "inline";
+                ge('mybody').style.backgroundImage = "none";
                 break;
             case "off":
-                $('diveLog').style.display = "block";
-                $('clear').style.display = "inline";
-                $('history').style.display = "inline";
-                $('addNew').style.display = "none";
-                $('items').style.display = "none";
+                ge('diveLog').style.display = "block";
+                ge('clear').style.display = "inline";
+                ge('history').style.display = "inline";
+                ge('addNew').style.display = "none";
+                ge('items').style.display = "none";
                 break;
             default:
                 return false;
@@ -76,12 +76,12 @@ window.addEventListener("DOMContentLoaded", function(){
 		getSelectedRadio();
 		var item = {};
 		
-		item.date = ["Date:", $('date').value];
-		item.locationOfDive = ["Location:", $('diveLocation').value];
+		item.date = ["Date:", ge('date').value];
+		item.locationOfDive = ["Location:", ge('diveLocation').value];
 		item.typeOfDive = ["Type of Dive:", diveType]; 
-		item.depth = ["Depth:", $('depth').value];
-		item.divesLength = ["Length:", $('groups').value];
-		item.notes = ["Notes:", $('notes').value];
+		item.depth = ["Depth:", ge('depth').value];
+		item.divesLength = ["Length:", ge('groups').value];
+		item.notes = ["Notes:", ge('notes').value];
 		//save data into local storage : use Stringify to convert our object to a string
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Dive Successfully Logged!");
@@ -100,7 +100,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
-		$('items').style.display = "block";
+		ge('items').style.display = "block";
 		for(var i=0, len=localStorage.length; i<len; i++){
 			var makeli = document.createElement('li');
 			var linksLi = document.createElement('li');
@@ -179,11 +179,11 @@ window.addEventListener("DOMContentLoaded", function(){
 		toggleControls("off");
 
 		//populate the form fields with current localstorage values
-		$('date').value = item.date[1];
-		$('diveLocation').value = item.locationOfDive[1];
-		$('depth').value = item.depth[1];
-		$('groups').value = item.divesLength[1];
-		$('notes').value = item.notes[1];
+		ge('date').value = item.date[1];
+		ge('diveLocation').value = item.locationOfDive[1];
+		ge('depth').value = item.depth[1];
+		ge('groups').value = item.divesLength[1];
+		ge('notes').value = item.notes[1];
 		var radios = document.forms[0].shoreOrBoat;
 		for(var i=0; i<radios.length; i++){
 			if(radios[i].value == "Shore" && item.typeOfDive[1] == "Shore"){
@@ -197,8 +197,8 @@ window.addEventListener("DOMContentLoaded", function(){
 		//remove the initial listener from the input 'save contact' button.
 		save.removeEventListener("click", storeData);
 		//Change Submit button value to edit button
-		$('submit').value = "Edit Log";
-		var editSubmit = $('submit');
+		ge('submit').value = "Edit Log";
+		var editSubmit = ge('submit');
 
 		//save the key value established in this function as a property of the editSubmit event
 		//so we can use that value when we save the data we edited.
@@ -234,9 +234,9 @@ window.addEventListener("DOMContentLoaded", function(){
 
 	function validate(e){
 		//define the elements we want to check 
-		var getDate = $('date');
-		var getLocation = $('diveLocation');
-		var getLength = $('groups');
+		var getDate = ge('date');
+		var getLocation = ge('diveLocation');
+		var getLength = ge('groups');
 
 		//reset error messages
 		errMsg.innerHTML = "";
@@ -290,18 +290,18 @@ window.addEventListener("DOMContentLoaded", function(){
 	var lengthOfDive = ["--Length in Minutes of Dive--", "10minutes", "20minutes", "30minutes", "40minutes", "50minutes", "60minutes"];
 	diveLength();
 	var diveType;
-	var errMsg = $('errors');
+	var errMsg = ge('errors');
 
 
 //set link and submit click events
 
-	var displayLink = $('history');
+	var displayLink = ge('history');
 	displayLink.addEventListener("click", getData);
 	
-	var clearLink = $('clear');
+	var clearLink = ge('clear');
 	clearLink.addEventListener("click", clearLocal);
 	
-	var save = $('submit');
+	var save = ge('submit');
 	save.addEventListener("click", validate);
 
 

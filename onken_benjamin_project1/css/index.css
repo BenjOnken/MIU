@@ -21,6 +21,10 @@ article{
 	text-align: center;
 	margin-top: 10px;
 }
+
+ul{
+	list-style-type: none;
+}
 h1{
 	font-family: Helvetica;
 	font-size: 20px;
@@ -46,15 +50,8 @@ p{
 }
 
 h2{
-	text-align: center;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	background: -webkit-linear-gradient(top, #ff9900 1%, #ff6600 50%, #ff9900 99%);
+	vertical-align: center;
+	text-align: left;
 }
 
-a:link{color:blue;}
-a:visited{color:purple;}
-a:hover{color:#ee0000;}
-a:active{color:yellow;}
-h2:active{background-color:#000000;}
 
