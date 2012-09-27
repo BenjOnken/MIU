@@ -1,12 +1,12 @@
 
 /*
 Benjamin Onken
-VFW 1209
+MiU 1210
 Project Style Sheet for index.html
 */
 
 body{
-	background-image:url('images/scuba.jpg'); 
+	background: -webkit-gradient(linear, 0 20%, 0 100%, from(white), to(lightblue));
 	background-repeat:no-repeat;
 	background-position: center;
 }
@@ -17,6 +17,10 @@ body header{
 	background: -webkit-linear-gradient(top, #666666 1%, #000000 50%, #666666 99%);
 }
 
+article{
+	text-align: center;
+	margin-top: 10px;
+}
 h1{
 	font-family: Helvetica;
 	font-size: 20px;
