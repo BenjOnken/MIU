@@ -24,36 +24,90 @@
 </head>
 <body>
 	<div data-role="page" id="home">
-
 		<div data-role="header" data-position="fixed">
 			<h1>Scuba Log Book</h1>
 		</div>
-
 		<div data-role="content">
-			<p>divessss</p>
-			<p>divessss</p>
-			<p>divessss</p>
-			<p>divessss</p>
-			<p><a href="#log" data-role="button" data-icon="arrow-r" data-iconpos="right">Log page</a></p>
+			<!--CTA-->
+			<div>
+				<a href ="additem.html" data-ajax="false"><img src="css/images/scubacta.png" /></a>
+			</div>
+			<!-- List View Thumbnails for home page -->
+			<ul data-role="listview" data-inset="true">
+				<li>
+					<a href="404.html" data-ajax="false">
+						<img src="css/images/10minutes.png" />
+						<h3>10 Minute dives</h3>
+						<p>Dives that are 10 minutes long</p>
+					</a>
+				</li>
+				<li>
+					<a href="404.html" data-ajax="false">
+						<img src="css/images/20minutes.png" />
+						<h3>20 Minute dives</h3>
+						<p>Dives that are 20 minutes long</p>
+					</a>
+				</li>
+				<li>
+					<a href="404.html" data-ajax="false">
+						<img src="css/images/30minutes.png" />
+						<h3>30 Minute dives</h3>
+						<p>Dives that are 30 minutes long</p>
+					</a>
+				</li>
+				<li>
+					<a href="404.html" data-ajax="false">
+						<img src="css/images/40minutes.png" />
+						<h3>40 Minute dives</h3>
+						<p>Dives that are 40 minutes long</p>
+					</a>
+				</li>
+				<li>
+					<a href="404.html" data-ajax="false">
+						<img src="css/images/50minutes.png" />
+						<h3>50 Minute dives</h3>
+						<p>Dives that are 50 minutes long</p>
+					</a>
+				</li>
+				<li>
+					<a href="404.html" data-ajax="false">
+						<img src="css/images/60minutes.png" />
+						<h3>60 Minute dives</h3>
+						<p>Dives that are 60 minutes long</p>
+					</a>
+				</li>
+			</ul>
 		</div>
 
 		<div data-role="footer" data-position="fixed">
-			<h4>Footer</h4>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="additem.html" data-ajax="false">Log Dive</a></li>
+					<li><a href="#info">Info</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
-	<div data-role="page" id="log" data-add-back-btn="true">
+	<div data-role="page" id="info" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
-			<h1>Scuba Log Book</h1>
+			<h1>Info</h1>
 		</div>
 
 		<div data-role="content">
-			<p>divessss</p>
+			
 		</div>
 
 		<div data-role="footer" data-position="fixed">
-			<h4>Footer</h4>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="additem.html" data-ajax="false">Log Dive</a></li>
+					<li><a href="#info">Info</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
