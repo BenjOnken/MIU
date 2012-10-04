@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Benjamin Onken
 MiU 1210
@@ -307,3 +308,6 @@ window.addEventListener("DOMContentLoaded", function(){
 
 
 });
+=======
+// write your javascript in here
+>>>>>>> master
