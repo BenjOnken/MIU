@@ -1,0 +1,138 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Scuba Log Book</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<!-- Home page -->
+	<div data-role="page" id="home">
+		<div data-role="header" data-position="fixed">
+			<h1>Scuba Log Book</h1>
+		</div>
+
+		<div data-role="content">
+			<!--CTA-->
+			<div>
+				<a href ="additem.html" data-ajax="false"><img src="css/images/scubacta.png" /></a>
+			</div>
+			</br>
+			<div><a href="#newstream">Check the latest dives out!</a></div>
+			<!-- List View Thumbnails for home page with filter -->
+			<br>
+				<div class="listview" data-filter="true">
+					<div class="ui-grid-a" data-filter="true">
+						<div class="ui-block-a"><div class="ui-bar"><a href="404.html" data-ajax="false"><img src="css/images/10minutes.png" /></br>10m</br>Dives</a></div></div>
+						<div class="ui-block-b"><div class="ui-bar"><a href="404.html" data-ajax="false"><img src="css/images/20minutes.png" /></br>20</br>Dives</a></div></div>
+						<div class="ui-block-a"><div class="ui-bar"><a href="404.html" data-ajax="false"><img src="css/images/30minutes.png" /></br>30</br>Dives</a></div></div>
+						<div class="ui-block-b"><div class="ui-bar"><a href="404.html" data-ajax="false"><img src="css/images/40minutes.png" /></br>40</br>Dives</a></div></div>
+						<div class="ui-block-a"><div class="ui-bar"><a href="404.html" data-ajax="false"><img src="css/images/50minutes.png" /></br>50</br>Dives</a></div></div>
+						<div class="ui-block-b"><div class="ui-bar"><a href="404.html" data-ajax="false"><img src="css/images/60minutes.png" /></br>60</br>Dives</a></div></div>
+					</div>
+				</div>
+			
+		</div>
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="additem.html" data-ajax="false">Log Dive</a></li>
+					<li><a href="#info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- info page -->
+	<div data-role="page" id="info" data-add-back-btn="true">
+		<!-- Header -->
+		<div data-role="header" data-position="fixed">
+			<h1>Info</h1>
+		</div>
+		<!-- Collapsible menus -->
+		<div data-role="content">
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Github Repo</h3>
+				<a href="https://github.com/BenjOnken/MIU/tree/master/onken_benjamin_project2" data-ajax="false">Github Repo</a>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Gold App</h3>
+				<a href="http://benjonken.github.com/MIU/onken_benjamin_project2/Gold/index.html" data-ajax="false">Gold App</a>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Bronze App</h3>
+				<a href="http://benjonken.github.com/MIU/onken_benjamin_project2/Bronze/index.html" data-ajax="false">Bronze App</a>
+			</div>			
+		</div>
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="additem.html" data-ajax="false">Log Dive</a></li>
+					<li><a href="#info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		<!-- News Stream -->
+		<div data-role="page" id="newstream" data-add-back-btn="true">
+			<!-- Header -->
+		<div data-role="header" data-position="fixed">
+			<h1>Info</h1>
+		</div>
+
+		<div data-role="content">
+			<div>10/3/2012 - Scuba in Atlantic Iowa</div>
+			<div>10/1/2012 - Scuba in Atlantic Iowa</div>
+			<div>09/30/2012 - Scuba in Atlantic Iowa</div>
+			<div>09/28/2012 - Scuba in Cozumel</div>
+			<div>09/22/2012 - Scuba in Fiji</div>
+			<div>09/19/2012 - Scuba in Quarry Oaks</div>
+			<div>09/18/2012 - Scuba in Jeffrows Country Pond</div>
+			<div>08/27/2012 - Scuba in Watering Hole</div>
+			<div>07/26/2012 - Scuba in Tar Pits</div>
+			<div>07/02/2012 - Scuba in Molten Lava</div>
+		</div>
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="additem.html" data-ajax="false">Log Dive</a></li>
+					<li><a href="#info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+
+
+</body>
+</html>
