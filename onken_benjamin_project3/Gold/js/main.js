@@ -52,6 +52,7 @@ function storeData(key){
 		//save data into local storage : use Stringify to convert our object to a string
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Dive Successfully Logged!");
+		location.reload();
 }
 
 
