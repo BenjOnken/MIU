@@ -30,7 +30,7 @@
 		<div data-role="content">
 			<!--CTA-->
 			<div>
-				<a href ="additem.html" data-ajax="false"><img src="css/images/scubacta.png" /></a>
+				<a href ="#logdive"><img src="css/images/scubacta.png" /></a>
 			</div>
 			<!-- List View Thumbnails for home page with filter -->
 			<br>
@@ -84,7 +84,7 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home">Home</a></li>
-					<li><a href="additem.html" data-ajax="false">Log Dive</a></li>
+					<li><a href="#logdive">Log Dive</a></li>
 					<li><a href="#info">Info</a></li>
 				</ul>
 			</div>
@@ -116,18 +116,77 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home">Home</a></li>
-					<li><a href="additem.html" data-ajax="false">Log Dive</a></li>
+					<li><a href="#logdive">Log Dive</a></li>
 					<li><a href="#info">Info</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+	<!-- Log dive page -->
+	<div data-role="page" id="logdive" data-add-back-btn="true">
+		<!-- Header -->
+		<div data-role="header" data-position="fixed">
+			<h1>Log a Dive</h1>
+		</div>
+		<form action="" method="post" id="divelogform">
+			<!-- Date -->
+			<div data-role="fieldcontain">
+				<label for="date">Date:</label>
+				<input type="date" id="date" placeholder="yyyy-mm-dd" class="required" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="location">Location:</label>
+				<input type="text" name="location" id="location" placeholder="i.e. Cozumel" class="required" />
+			</div>
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlegroup">
+					<legend>Type of Dive:</legend>
+					<input type="radio" value="Boat" name="typeofdive" id="boat" class="required"/>
+					<label for="boat">Boat</label>
+					<input type="radio" value="Shore" name="typeofdive" id="shore" />
+					<label for="shore">Shore</label>
+				</fieldset>
+			</div>
+			<div data-role="fieldcontain">
+				<label for="depth">Depth:</label>
+				<input type="range" name="depth" id="depth" value="0" min="0" max="250" class="required" />
+			</div>
+			<div data-role="fieldcontain">
+				<label for="length">Length of Dive</label>
+				<select name="length" id="length" data-native-menu="false" class="required" >
+					<option data-placeholder="true">Please select a length</option>
+					<option value="10minutes">10 Minutes</option>
+					<option value="20minutes">20 Minutes</option>
+					<option value="30minutes">30 Minutes</option>
+					<option value="40minutes">40 Minutes</option>
+					<option value="50minutes">50 Minutes</option>
+					<option value="60minutes">60 Minutes</option>
+				</select>
+			</div>
+			<div data-role="fieldcontain">
+				<label for="notes">Notes:</label>
+				<textarea id="notes" placeholder="Notes..."></textarea>
+			</div>
+			<div data-role="fieldcontain">
+				<input type="submit" value="Log Dive" data-theme="b" />
+				<input type="reset" value="Reset" data-theme="a" />
+			</div>
+			<a href="#pageerrors" id="errorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
+		</form>
+	</div>
 
-	
+	<div data-role="dialog" id="pageerrors">
+		<!-- Header -->
+		<div data-role="header" data-position="fixed">
+			<h1>Missing Fields</h1>
+		</div>
+	</div>
+
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
