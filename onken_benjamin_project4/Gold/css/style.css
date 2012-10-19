@@ -2,3 +2,11 @@
 label.error{display:block; margin:10px 0; color:#cc0000;}
 
 #errorslink{display:none;}
+
+/* div.ui-header.ui-bar-a.ui-header-fixed.slidedown {
+height: 40px;
+}
+*/
+h1.ui-title>a>img {
+width: 100%;
+}

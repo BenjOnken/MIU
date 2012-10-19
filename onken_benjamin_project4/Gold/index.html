@@ -1,6 +1,6 @@
 <!doctype html>  
 
-<!-- Project 3 -->
+<!-- Project 4 -->
 <!-- Benjamin Onken -->
 <!-- MiU 1210 -->
 
@@ -22,15 +22,16 @@
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
+
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 
 </head>
 <body>
-	<div data-role="page" id="home">
-		<div data-role="header" data-position="fixed">
-			<h1>Scuba Log Book</h1>
+	<div data-role="page" id="home" data-theme="a">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1><a href ="#home"><img src="css/images/logo.png"</img></a></h1>
 		</div>
 		<div data-role="content">
 			<!--CTA-->
@@ -39,7 +40,7 @@
 			</div>
 			<!-- List View Thumbnails for home page with filter -->
 			<br>
-			<ul data-role="listview" data-inset="true" data-filter="true">
+			<ul data-role="listview" data-inset="true" data-filter="true" data-theme="b">
 				<li>
 					<a href="404.html" data-ajax="false">
 						<img src="css/images/10minutes.png" />
@@ -96,24 +97,24 @@
 		</div>
 	</div>
 	<!-- info page -->
-	<div data-role="page" id="info" data-add-back-btn="true">
+	<div data-role="page" id="info" data-add-back-btn="true" data-theme="a">
 		<!-- Header -->
-		<div data-role="header" data-position="fixed">
-			<h1>Info</h1>
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1><a href ="#home"><img src="css/images/logo.png"</img></a></h1>
 		</div>
 		<!-- Collapsible menus -->
-		<div data-role="content">
-			<div data-role="collapsible" data-collapsed="true">
+		<div data-role="content" data-theme="a">
+			<div data-role="collapsible" data-collapsed="true" data-theme="b">
 				<h3>Github Repo</h3>
-				<a href="https://github.com/BenjOnken/MIU/tree/master/onken_benjamin_project3" data-ajax="false">Github Repo</a>
+				<a href="https://github.com/BenjOnken/MIU/tree/master/onken_benjamin_project4" data-ajax="false">Github Repo</a>
 			</div>
-			<div data-role="collapsible" data-collapsed="true">
+			<div data-role="collapsible" data-collapsed="true" data-theme="b">
 				<h3>Gold App</h3>
-				<a href="http://benjonken.github.com/MIU/onken_benjamin_project3/Gold/index.html" data-ajax="false">Gold App</a>
+				<a href="http://benjonken.github.com/MIU/onken_benjamin_project4/Gold/index.html" data-ajax="false">Gold App</a>
 			</div>
-			<div data-role="collapsible" data-collapsed="true">
+			<div data-role="collapsible" data-collapsed="true" data-theme="b">
 				<h3>Bronze App</h3>
-				<a href="http://benjonken.github.com/MIU/onken_benjamin_project3/Bronze/index.html" data-ajax="false">Bronze App</a>
+				<a href="http://benjonken.github.com/MIU/onken_benjamin_project4/Bronze/index.html" data-ajax="false">Bronze App</a>
 			</div>			
 		</div>
 		<!-- Footer Navbar -->
@@ -128,37 +129,37 @@
 		</div>
 	</div>
 	<!-- Log dive page -->
-	<div data-role="page" id="logdive" data-add-back-btn="true">
+	<div data-role="page" id="logdive" data-add-back-btn="true" data-theme="a">
 		<!-- Header -->
 		<div data-role="header" data-position="fixed">
-			<h1>Log a Dive</h1>
+			<h1><a href ="#home"><img src="css/images/logo.png"</img></a></h1>
 		</div>
-		<form action="" method="post" id="divelogform">
+		<form action="" method="post" id="divelogform" data-theme="b">
 			<!-- Date -->
-			<div data-role="fieldcontain">
+			<div data-role="fieldcontain" data-theme="b">
 				<label for="date">Date:</label>
-				<input type="date" id="date" placeholder="yyyy-mm-dd" class="required" />
+				<input type="date" id="date" placeholder="yyyy-mm-dd" class="required" data-theme="b" />
 			</div>
 			<div data-role="fieldcontain">
 				<label for="location">Location:</label>
-				<input type="text" name="location" id="location" placeholder="i.e. Cozumel" class="required" />
+				<input type="text" name="location" id="location" placeholder="i.e. Cozumel" class="required" data-theme="b" />
 			</div>
 			<div data-role="fieldcontain">
 				<fieldset data-role="controlegroup">
 					<legend>Type of Dive:</legend>
-					<input type="radio" value="Boat" name="typeofdive" id="boat" class="required"/>
+					<input type="radio" value="Boat" name="typeofdive" id="boat" class="required" data-theme="b"/>
 					<label for="boat">Boat</label>
-					<input type="radio" value="Shore" name="typeofdive" id="shore" />
+					<input type="radio" value="Shore" name="typeofdive" id="shore" data-theme="b" />
 					<label for="shore">Shore</label>
 				</fieldset>
 			</div>
 			<div data-role="fieldcontain">
 				<label for="depth">Depth:</label>
-				<input type="range" name="depth" id="depth" value="0" min="0" max="250" class="required" />
+				<input type="range" name="depth" id="depth" value="0" min="0" max="250" class="required" data-theme="b" />
 			</div>
 			<div data-role="fieldcontain">
 				<label for="length">Length of Dive</label>
-				<select name="length" id="length" data-native-menu="false" class="required select" >
+				<select name="length" id="length" data-native-menu="false" class="required select" data-theme="b" >
 					<option value="" data-placeholder="true">Please select a length</option>
 					<option value="10minutes">10 Minutes</option>
 					<option value="20minutes">20 Minutes</option>
@@ -170,11 +171,12 @@
 			</div>
 			<div data-role="fieldcontain">
 				<label for="notes">Notes:</label>
-				<textarea id="notes" placeholder="Notes..."></textarea>
+				<textarea id="notes" placeholder="Notes..." data-theme="b"></textarea>
 			</div>
 			<div data-role="fieldcontain">
 				<input type="submit" value="Log Dive" data-theme="b" />
-				<input type="reset" value="Reset" data-theme="a" />
+				<br>
+				<input type="reset" value="Reset" data-theme="e" />
 			</div>
 			<a href="#pageerrors" id="errorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
 		</form>
